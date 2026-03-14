@@ -1,10 +1,10 @@
 import numpy as np
 import pandas as pd
 
-from utils import read_matrix
+from utils import print_matrix, read_matrix
 
 # Load the character matrix from the file
-file_path = "./data/day06.txt"
+file_path = "./data/day06_test.txt"
 matrix = read_matrix(file_path)
 
 new_matrix = matrix.copy()
@@ -62,6 +62,6 @@ while in_map:
     new_matrix[path_row, path_col] = "X"
     row, col = row_, col_
 
-print(new_matrix)
+print_matrix(new_matrix)
 a, b = np.where(new_matrix == "X")
 print(len(a))
